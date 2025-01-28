@@ -14,6 +14,33 @@ keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 
 keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
+-- Tab management
+keymap('n', '<leader>ta', ':$tabnew<CR>', opts)
+keymap('n', '<leader>tc', ':tabclose<CR>', opts)
+
+keymap('n', '<leader>to', ':tabonly<CR>', opts)
+keymap('n', '<leader>tn', ':tabn<CR>', opts)
+keymap('n', '<leader>tp', ':tabp<CR>', opts)
+
+-- Move current tab to previous position
+keymap('n', '<leader>tmp', ':-tabmove<CR>', opts)
+
+-- Move current tab to next position
+keymap('n', '<leader>tmn', ':+tabmove<CR>', opts)
+
+
+-- Quick tab navigation
+keymap('n', '<leader>1', '1gt', opts)
+keymap('n', '<leader>2', '2gt', opts)
+keymap('n', '<leader>3', '3gt', opts)
+keymap('n', '<leader>4', '4gt', opts)
+keymap('n', '<leader>5', '5gt', opts)
+
+
+-- Split window
+keymap('n', '<leader>sv', ':vsplit<CR>', opts)  -- Split vertically
+keymap('n', '<leader>sh', ':split<CR>', opts)   -- Split horizontally
+
 
 
 -- Save and quit
